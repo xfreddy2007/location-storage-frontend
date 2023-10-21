@@ -1,0 +1,49 @@
+// https://tailwindcss.com/docs/responsive-design#customizing-breakpoints
+$transitionTimingFunction: cubic-bezier(0.8, 0, 0.2, 1); // 這個是參考 apple.com 的
+// https://tailwindcss.com/docs/responsive-design
+@mixin sm {
+  @media (min-width: 640px) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+@mixin xl2 {
+  @media (min-width: 1536px) {
+    @content;
+  }
+}
+@mixin xl3 {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin attach-root($new-class) {
+  $current-selector: &; // array
+  $new-selector: []; // new array
+
+  @each $item in $current-selector {
+    $first-node: nth($item, 1);
+    $appended-node: $first-node + $new-class;
+    $new-item: set-nth($item, 1, $appended-node); // replace target node
+    $new-selector: append($new-item, $new-selector);
+  }
+
+  @at-root #{$new-selector} {
+    @content;
+  }
+}
