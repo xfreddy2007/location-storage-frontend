@@ -10,19 +10,6 @@ const Header = () => {
         asdakjshd
         <span>HITHITHITHIT</span>
       </p>
-      <style jsx>{`
-        p {
-          color: red;
-          span {
-            color: blue;
-          }
-        }
-        @media (min-width: 640px) {
-          p {
-            color: green;
-          }
-        }
-      `}</style>
     </div>
   );
 };
