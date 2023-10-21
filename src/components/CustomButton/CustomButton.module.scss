@@ -1,0 +1,36 @@
+.root {
+  @apply py-2 px-6 rounded bg-[#ff0055] text-white cursor-pointer mr-4 no-underline inline-block;
+  border: 1px solid #ff0055;
+  &:focus {
+    outline: none;
+  }
+  &:hover,
+  &:active {
+    @apply bg-[#ff4382] border-[#ff4382];
+  }
+  &:disabled,
+  &:hover:disabled,
+  &:active:disabled {
+    @apply bg-[#ccc] text-[#979797] border-[#ccc] cursor-not-allowed;
+  }
+}
+.buttonInverse {
+  @apply bg-transparent text-[#ff0055];
+  &:hover,
+  &:active {
+    @apply bg-[#ff0055] text-white;
+  }
+}
+.buttonDanger {
+  @apply bg-[#830000] border-[#830000];
+  &:hover,
+  &:active {
+    @apply bg-[#f34343] border-[#f34343];
+  }
+}
+.buttonSmall {
+  @apply text-[0.8rem];
+}
+.buttonLarge {
+  @apply text-[1.5rem];
+}
