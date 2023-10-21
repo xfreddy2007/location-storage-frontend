@@ -1,17 +1,12 @@
-'use client';
+import React from 'react';
+import style from './Header.module.scss';
 
-import style from './Head.module.scss';
+type HeaderProps = {
+  children: React.ReactNode;
+};
 
-const Header = () => {
-  return (
-    <div>
-      <div className={style.root}>Header</div>
-      <p>
-        asdakjshd
-        <span>HITHITHITHIT</span>
-      </p>
-    </div>
-  );
+const Header: React.FC<HeaderProps> = ({ children }) => {
+  return <header className={style.root}>{children}</header>;
 };
 
 export default Header;

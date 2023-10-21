@@ -1,0 +1,4 @@
+.root {
+  @apply w-full h-16 flex items-center fixed top-0 left-0 bg-[#ff0055] z-[5] px-4 justify-center md:justify-between;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
+}

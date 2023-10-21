@@ -1,0 +1,20 @@
+.root {
+  @apply m-4 min-w-[17.5rem];
+  width: calc(45% - 2rem);
+  a {
+    @apply flex items-center w-full h-full no-underline p-4 text-white bg-[#292929];
+    &:hover,
+    &:active {
+      @apply bg-[#ffd900];
+      h2,
+      h3 {
+        @apply text-[#292929];
+      }
+    }
+  }
+}
+
+.card {
+  @apply relative m-0 rounded-[6px] overflow-hidden bg-white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}

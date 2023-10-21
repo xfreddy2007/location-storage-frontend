@@ -1,0 +1,15 @@
+.button {
+  @apply w-12 h-12 bg-transparent border-none flex flex-col justify-around mr-8 cursor-pointer;
+  span {
+    @apply block w-full h-[2.5px] bg-white;
+  }
+  @include md {
+    @apply hidden;
+  }
+}
+.headerNav {
+  @apply hidden;
+  @include md {
+    @apply block;
+  }
+}

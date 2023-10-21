@@ -1,0 +1,39 @@
+.root {
+  @apply list-none w-full h-full flex flex-col justify-center items-center;
+  li {
+    @apply m-4;
+  }
+  a {
+    @apply text-[#292929] no-underline p-2;
+    border: 1px solid transparent;
+    &:hover,
+    &:active {
+      @apply bg-[#f8df00] border-[#292929] text-[#292929];
+    }
+  }
+  button {
+    @apply cursor-pointer text-[#292929] bg-transparent p-2;
+    border: 1px solid #292929;
+    &:focus {
+      outline: none;
+    }
+    &:hover,
+    &:active {
+      @apply bg-[#292929] text-white;
+    }
+  }
+  @include md {
+    @apply flex-row;
+    li {
+      @apply my-0 mx-2;
+    }
+    button {
+      @apply text-white bg-transparent;
+      border: 1px solid white;
+      &:hover,
+      &:active {
+        @apply bg-[#f8df00] text-[#292929];
+      }
+    }
+  }
+}
